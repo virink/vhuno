@@ -1,14 +1,15 @@
 # Header
 menu:
-  首页: /#blog
-  关于: /about
-  归档: /archive
+  Blog: /#blog
+  About: /about
+  #归档: /archive
+  Links: /links
 
 # Site favicon
-favicon: /favicon.png
+favicon: /images/favicon.ico
 
 # Site logo
-# logo: /avatar.png
+logo: /images/avatar.png
 
 # Enable Mathjax
 mathjax: true

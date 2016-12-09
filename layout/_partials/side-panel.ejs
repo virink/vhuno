@@ -1,29 +1,29 @@
-
 <% if (is_home()) { %> 
-<header class="panel-cover">
+  <header class="panel-cover">
 <% } else { %>
-<header class="panel-cover panel-cover--collapsed">
+  <header class="panel-cover panel-cover--collapsed">
 <% } %>
 
   <div class="panel-main">
-
-  
     <div class="panel-main__inner panel-inverted">
-    <div class="panel-main__content">
-
-        <% if (theme.logo) { %>
+      <div class="panel-main__content">
+      <% if (theme.logo) { %>
         <a href="/" title="link to homepage for <%= config.title %>"><img src="<%= theme.logo %>" width="80" alt="<%= config.title %> logo" class="panel-cover__logo logo" /></a>
-        <% } %>
+      <% } %>
 
-        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage"><%= config.title %></a></h1>
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage"><%= config.author %></a></h1>
         <hr class="panel-cover__divider" />
 
         <% if (config.subtitle) { %>
         <p class="panel-cover__description">
           <%= config.subtitle %>
         </p>
-        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        <hr class="panel-cover__divider" />
         <% } %>
+
+        <!-- TagsCloud -->
+        <%- partial('_partials/tagscloud') %>
+        <!-- TagsCloud -->
 
         <div class="navigation-wrapper">
 

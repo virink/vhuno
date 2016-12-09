@@ -50,13 +50,17 @@
     <% if (theme.rss){ %>
       <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
     <% } %>
+
     <% if (theme.favicon){ %>
       <link rel="icon" type="image/x-icon" href="<%- theme.favicon %>">
+      <link rel="icon" href="<%- theme.favicon %>">
     <% } %>
+    
     <%- css('css/uno.css') %>
     <%- css('css/highlight') %>
+    <%- css('css/tagscloud.css') %>
     <%- css('css/archive.css') %>
-    <%- css('css/china-social-icon.css') %>
+    <%- css('css/font-awesome.min.css') %>
 
 </head>
 <body>
@@ -77,9 +81,11 @@
 
     <!-- js files -->
     <script src="<%- config.root %>js/jquery.min.js"></script>
+    <script src="<%- config.root %>js/jquery.imagesloaded.min.js"></script>
     <script src="<%- config.root %>js/main.js"></script>
     <script src="<%- config.root %>js/scale.fix.js"></script>
-    
+    <script src="<%- config.root %>js/tagcloud.js"></script>
+    <script src="<%- config.root %>js/gallery.js"></script>
 
     <%- partial('_scripts/mathjax') %>
     <%- partial('_scripts/awesome-toc') %>

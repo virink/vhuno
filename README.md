@@ -1,6 +1,6 @@
 # vHuno
 
-vHuno是为[Hexo](http://hexo.io/)编写的一个响应式的主题，该主题基于[Uno](https://github.com/someus/huno/)。
+vHuno是为[Hexo](http://hexo.io/)编写的一个响应式的主题，该主题基于[Huno](https://github.com/someus/huno/)。
 
 ![](./demo.gif)
 
@@ -18,7 +18,6 @@ $ git clone git://github.com/virink/vhuno.git themes/vhuno
 ```plain
 theme: huno
 ```
-
 
 ## 兼容性
 在Hexo 3.1.1测试正常。
@@ -130,127 +129,25 @@ layout: page-archive
 
 
 ## 评论
-支持Disqus和多说，在Hexo配置文件`_config.yml`中设置名称即可，例如：
+支持多说，在Hexo配置文件`_config.yml`中设置名称即可，例如：
 ```yaml
-# Disqus
-disqus_shortname: letian
 
 # Duoshuo
-duoshuo_shortname: letian
+duoshuo_shortname: virink
 ```
-
-> !!! 如果两个都设置，则两个评论工具都会显示。
 
 ## Social Icon
 默认提供了Github的图标，Github用户名请在Hexo的配置文件`_config.yml`中配置，例如：
 ```yaml
 # Social
 social:
-  github: someus
+  github: virink
 ```
 
 可以根据需要在`layout/_partials/social.ejs`中添加更多的图标。
 
-
-## China Social Icon
-> 这套字体来自 [设计素材：国内常用社交图标的web字体](http://www.zcool.com.cn/gfx/ZMzM1MjEy.html)， 版权归原作者所有。在huno中CSS文件做了些修改。
-
-这套字体和上面`Social Icon`的设计得并不一样，如果混用，排版效果会略差。例如，在`layout/_partials/social.ejs`加上：
-
-```
-<li class="navigation__item">
-  <a href="" title="">
-    <i class='icon cs-icon-douban'></i>
-    <span class="label">Douban</span>
-  </a>
-</li>
-
-<li class="navigation__item">
-  <a href="" title="">
-    <i class='icon cs-icon-weibo'></i>
-    <span class="label">Weibo</span>
-  </a>
-</li>
-```
-
-效果如下：
-
-![](./cs-icon.png)
-
-字体文件位于`source/fonts/china-social/`中，对应的css文件是`source/css/china-social-icon.css`。
-
-
 ## 网站统计
 将网站统计（如Google analysis、CNZZ、百度统计等）代码放入`layout/_scripts/site-analytics.ejs`即可。
-
-## 如何将Huno生成的静态网站放在某网站子目录
-
-例如要将其放入`http://hi.letiantian.me/huno/`下，则需要：
-
-**修改Hexo配置文件`_config.yml`:**
-
-```yaml
-# URL
-## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://hi.letiantian.me/huno
-root: /huno/
-```
-
-**修改主题的配置文件`_config.yml`:**
-
-```yaml
-# Header
-menu:
-  首页: /huno/#blog
-  关于: /huno/about
-  归档: /huno/archive
-
-# Site favicon
-favicon: /huno/favicon.png
-```
-
-**修改`huno/source/js/main.js`:**
-
-将
-```js
-if (window.location.pathname != "/") {
-  $('.panel-cover').addClass('panel-cover--collapsed');
-}
-```
-
-修改为
-```js
-if (window.location.pathname != "/huno/") {
-  $('.panel-cover').addClass('panel-cover--collapsed');
-}
-```
-
-**修改`huno/layout/_partials/side-panel.ejs`:**
-
-将
-```plain
-<% for (var i in theme.menu){ %>
-  <%
-    if (theme.menu[i]+'' == '/#blog') {
-      nav_btn_class = 'blog-button';
-    } else {
-      nav_btn_class = '';
-    }
-  %>
-```
-
-修改为：
-
-```plain
-<% for (var i in theme.menu){ %>
-  <%
-    if (theme.menu[i]+'' == '/huno/#blog') {
-      nav_btn_class = 'blog-button';
-    } else {
-      nav_btn_class = '';
-    }
-  %>
-```
 
 ## 其他
 
