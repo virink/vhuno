@@ -1,17 +1,17 @@
-# Huno
+# vHuno
 
-Huno是为[Hexo](http://hexo.io/)编写的一个响应式的主题，该主题基于[Uno](https://github.com/daleanthony/uno/)。
+vHuno是为[Hexo](http://hexo.io/)编写的一个响应式的主题，该主题基于[Uno](https://github.com/someus/huno/)。
 
 ![](./demo.gif)
 
 ## Demo
 
-[Huno's demo](http://hi.letiantian.me/huno/)
+[Virink's Blog](http://www.virzz.com/)
 
 ## 安装
 
 ```plain
-$ git clone git://github.com/someus/huno.git themes/huno
+$ git clone git://github.com/virink/vhuno.git themes/vhuno
 ```
 
 修改Hexo的配置文件`_config.xml`：
