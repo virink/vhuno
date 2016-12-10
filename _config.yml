@@ -19,3 +19,6 @@ awesome_toc: true
 
 # Enable githubRepoWidget
 github_repo_widget: false
+
+# Date / Time format
+date_time_format: YYYY-MM-DD HH:mm:ss

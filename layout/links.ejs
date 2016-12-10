@@ -1,16 +1,12 @@
-<%
-var post = page;
-%>
-
-<article class="post-container post-container--single">
-  <header class="post-header">
-    <h1 class="post-title"><%= post.title %></h1>
-  </header>
-  <section id="post-content" class="article-content post">
-    <%- post.content %>
-  </section>
-</article>
-
-<div class="archive-meta">
-  <%= post %>
+<!-- 暫未美化 -->
+<% if (config.links && config.links.length) { %>
+<h1><%= __('links') %></h1>
+<div class="linkslist">
+  <p class="asidetitle"></p>
+    <ul>
+    <% config.links.forEach(function(item) { %>
+      <li><a href="<%= item.url %>" target="_blank" title="<%= item.info %>"><%= item.name %></a> ---- <%= item.info %></li>
+    <% }); %>
+    </ul>
 </div>
+<% } %>

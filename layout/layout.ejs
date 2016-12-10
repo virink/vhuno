@@ -56,18 +56,17 @@
       <link rel="icon" href="<%- theme.favicon %>">
     <% } %>
     
+    <%- css('css/font-awesome.min.css') %>
     <%- css('css/uno.css') %>
     <%- css('css/highlight') %>
     <%- css('css/tagscloud.css') %>
     <%- css('css/archive.css') %>
-    <%- css('css/font-awesome.min.css') %>
 
 </head>
 <body>
 
     <span class="mobile btn-mobile-menu">
-        <i class="icon icon-list btn-mobile-menu__icon"></i>
-        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+        <i class="fa btn-mobile-menu__icon fa-bars" aria-hidden="true"></i>
     </span>
 
     <%- partial('_partials/side-panel') %>

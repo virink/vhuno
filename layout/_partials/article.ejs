@@ -1,54 +1,46 @@
 <%
 var post = page;
 %>
-
 <article class="post-container post-container--single">
-
   <header class="post-header">
-    
     <h1 class="post-title"><%= post.title %></h1>
-
     <% if (type == 'post') { %>
-
     <div class="post-meta">
       <time datetime="<%= date(post.date, config.date_format) %>" class="post-meta__date date"><%= date(post.date, config.date_format) %></time> 
-
       <span class="post-meta__tags tags">
-
-          <% if (post.categories && post.categories.length > 0){ %>
-            <font class="categories">
-            &#8226; 分类:
-            <%- list_categories(post.categories, {
-              show_count: false,
-              class: 'categories',
-              style: 'none'
-            }) %>
-            </font>
-          <% } %>
-
-          <% if (post.tags && post.tags.length > 0){ %>
-             &#8226; 标签:
-            <font class="tags">
-              <%- list_tags(post.tags, {
-                show_count: false,
-                style: 'none',
-                class: 'tags'
-              }) %>
-            </font>
-          <% } %>
-
+      <% if (post.categories && post.categories.length > 0){ %>
+        <font class="categories">&#8226; 分类:
+        <%- list_categories(post.categories, {
+          show_count: false,
+          class: 'categories',
+          style: 'none'
+        }) %>
+        </font>
+      <% } %>
+      <% if (post.tags && post.tags.length > 0){ %>
+        &#8226; 标签:
+        <font class="tags">
+        <%- list_tags(post.tags, {
+          show_count: false,
+          style: 'none',
+          class: 'tags'
+        }) %>
+        </font>
+      <% } %>
       </span>
     </div>
-    
     <% } %>
-
   </header>
-
   <section id="post-content" class="article-content post">
-    <%- post.content %>
+  <%- post.content %>
   </section>
-
+  <div class="copyright">
+    <span>文本標題:</span><a href="<%= url_for(page.path) %>" target="_blank"><%= post.title %></a><br />
+    <span>文章作者:</span><a href="/" title="回到主页" target="_blank"><%= config.author %></a><br />
+    <span>發佈時間:</span><%= date(post.date, theme.date_time_format) %><br />
+    <span>最後更新:</span><%= date(post.updated, theme.date_time_format) %><br />
+    <span>原始鏈接:</span><a class="post-url" href="<%= url_for(page.permalink) %>" title="<%= post.title %>" target="_blank"><%= url_for(page.permalink) %></a><br />
+    <span>轉載聲明:</span><i class="fa fa-creative-commons"></i>转载请保留原文链接及作者。
+  </div>
   <%- partial('duoshuo') %>
-
 </article>
-

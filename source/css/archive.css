@@ -22,3 +22,15 @@
 .archive-meta .archive-list-count::after {
     content: ")";
 }
+
+.copyright {
+  width: 85%;
+  max-width: 45em;
+  margin: 1.2em auto 0;
+  padding: 0.5em 1.8em;
+  border: 1px solid #d3d3d3;
+  font-size: 0.93em;
+  line-height: 1.6em;
+  word-break: break-all;
+  background: rgba(255,255,255,0.4);
+}
