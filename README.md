@@ -9,12 +9,12 @@ vHuno是为[Hexo](http://hexo.io/)编写的一个响应式的主题，该主题�
 ## 安装
 
 ```plain
-$ git clone git://github.com/virink/vhuno.git themes/vhuno
+$ git clone https://github.com/virink/vhuno.git themes/vhuno
 ```
 
 修改Hexo的配置文件`_config.xml`：
 ```plain
-theme: huno
+theme: vhuno
 ```
 
 ## 兼容性
@@ -30,16 +30,13 @@ menu:
   友链: /links
 
 # Site favicon
-favicon: /favicon.png
+favicon: /images/favicon.png
 
 # Site logo
-# logo: /avatar.png
+# logo: /images/avatar.png
 
 # Enable Mathjax
 mathjax: true
-
-# Enable awesome-toc
-awesome_toc: true
 
 # Enable githubRepoWidget
 github_repo_widget: false
@@ -60,12 +57,6 @@ $(document).ready(function(){
 
 官网：[mathjax](https://www.mathjax.org/)
 
-
-**awesome_toc:**
-
-为文章生成目录。
-
-官网：[awesome-toc](https://github.com/someus/awesome-toc)
 
 **github_repo_widget:**
 
@@ -88,11 +79,7 @@ $(document).ready(function(){
   background-size: cover; }
 ```
 
-可以看出图片路径是`source/images/background-cover.jpg`。可以根据需要替换成不同的图片，或者修改图片URL。例如修改成CDN中的某个图片（[#28](https://github.com/someus/huno/pull/28)）：
-
-```
-background: url("//img.alicdn.com/tps/TB1UC8nJVXXXXbRXpXXXXXXXXXX-1920-1200.jpg") top left no-repeat #666666;
-```
+可以看出图片路径是`source/images/background-cover.jpg`。可以根据需要替换成不同的图片，或者修改图片URL。
 
 
 ## 归档页面
@@ -135,11 +122,13 @@ duoshuo_shortname: virink
 ```
 
 ## Social Icon
-默认提供了Github的图标，Github用户名请在Hexo的配置文件`_config.yml`中配置，例如：
+默认提供了Github/Twitter/Telegram的图标，Github/Twitter/Telegram用户名请在Hexo的配置文件`_config.yml`中配置，例如：
 ```yaml
 # Social
 social:
   github: virink
+  twitter: virinkz
+  tlelgram: virink
 ```
 
 可以根据需要在`layout/_partials/social.ejs`中添加更多的图标。

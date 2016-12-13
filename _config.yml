@@ -1,9 +1,9 @@
 # Header
 menu:
-  Blog: /#blog
-  About: /about
-  #归档: /archive
-  Links: /links
+  博客: /#blog
+  歸檔: /archive
+  友鏈: /links
+  關於: /about
 
 # Site favicon
 favicon: /images/favicon.ico
