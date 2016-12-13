@@ -6,7 +6,7 @@ var post = page;
     <h1 class="post-title"><%= post.title %></h1>
     <% if (type == 'post') { %>
     <div class="post-meta">
-      <time datetime="<%= date(post.date, config.date_format) %>" class="post-meta__date date"><%= date(post.date, config.date_format) %></time> 
+      <time datetime="<%= date(post.date, theme.date_time_format) %>" class="post-meta__date date"><%= date(post.date, theme.date_time_format) %></time> 
       <span class="post-meta__tags tags">
       <% if (post.categories && post.categories.length > 0){ %>
         <font class="categories">&#8226; 分类:

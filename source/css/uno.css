@@ -1130,8 +1130,8 @@ hr {
   display: none !important; }
 
 .post-comments {
-  border-top: 1px solid #dddddd;
-  padding: 60px 0; }
+  /*border-top: 1px solid #dddddd;*/
+  padding: 10px 0; }
 
 .post-meta {
   margin: 0 0 1.4em 0;

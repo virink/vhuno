@@ -2,8 +2,6 @@
 
 vHuno是为[Hexo](http://hexo.io/)编写的一个响应式的主题，该主题基于[Huno](https://github.com/someus/huno/)。
 
-![](./demo.gif)
-
 ## Demo
 
 [Virink's Blog](http://www.virzz.com/)
@@ -29,7 +27,7 @@ theme: huno
 menu:
   首页: /#blog
   关于: /about
-  归档: /archive
+  友链: /links
 
 # Site favicon
 favicon: /favicon.png

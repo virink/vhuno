@@ -14,11 +14,14 @@ logo: /images/avatar.png
 # Enable Mathjax
 mathjax: true
 
-# Enable awesome-toc
-awesome_toc: true
+# Enable fancybox
+fancybox: true
 
 # Enable githubRepoWidget
 github_repo_widget: false
+
+# Enable BaiduPush
+baidupush: false
 
 # Date / Time format
 date_time_format: YYYY-MM-DD HH:mm:ss
