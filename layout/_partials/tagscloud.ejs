@@ -1,11 +1,13 @@
 <% var n = 0; %>
 <% if (site.tags.length){ %>
   <div id="tagscloud">
-  <% site.tags.sort('posts.length','desc').limit(20).each(function(item){ %>
-    <% if(item.posts.length){ %>
-      <a href="<%- config.root %><%- item.path %>" class="tagc<%= n%5+1 %>"><%= item.name %> : <%= item.posts.length %></a>
-      <% n++; %>
-    <% } %>
-  <% }); %>
+<%
+  site.tags.sort('posts.length','desc').limit(20).each(function(item){
+  	if(item.posts.length){
+  %><a href="<%- config.root %><%- item.path %>" class="tagc<%= n%5+1 %>"><%= item.name %> : <%= item.posts.length %></a><%
+  	  n++;
+	}
+  });
+%>
 </div>
 <% } %>
