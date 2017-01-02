@@ -4,7 +4,7 @@ vHuno是为[Hexo](http://hexo.io/)编写的一个响应式的主题，该主题�
 
 ## Demo
 
-[Virink's Blog](http://www.virzz.com/)
+[Virink's Blog](https://www.virzz.com/)
 
 ## 安装
 
