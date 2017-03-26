@@ -114,12 +114,7 @@ layout: page-archive
 
 
 ## 评论
-支持多说，在Hexo配置文件`_config.yml`中设置名称即可，例如：
-```yaml
-
-# Duoshuo
-duoshuo_shortname: virink
-```
+移除
 
 ## Social Icon
 默认提供了Github/Twitter/Telegram的图标，Github/Twitter/Telegram用户名请在Hexo的配置文件`_config.yml`中配置，例如：
