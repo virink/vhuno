@@ -1,12 +1,14 @@
-<!-- 暫未美化 -->
 <% if (config.links && config.links.length) { %>
 <h1><%= __('links') %></h1>
 <div class="linkslist">
-  <p class="asidetitle"></p>
-    <ul>
     <% config.links.forEach(function(item) { %>
-      <li><a href="<%= item.url %>" target="_blank" title="<%= item.info %>"><%= item.name %></a> ---- <%= item.info %></li>
+    <a href="<%= item.url %>" target="_blank" title="<%= item.info %>">
+        <figure>
+            <img src="<% if (item.img) {%><%= item.img %><% } else { %>/images/default.jpg<% } %>">
+            <figcaption><%= item.name %></figcaption>
+            <p><%= item.info %></p>
+        </figure>
+    </a>
     <% }); %>
-    </ul>
 </div>
 <% } %>

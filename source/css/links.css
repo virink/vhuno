@@ -1,0 +1,64 @@
+.linkslist {
+    column-width: 200px;
+    column-gap: 15px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+}
+
+div.linkslist figure {
+    background: #f4eff9;
+    border: 2px solid #fcfcfc;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    margin: 0 2px 15px;
+    padding: 15px;
+    padding-bottom: 10px;
+    transition: opacity .4s ease-in-out;
+    display: inline-block;
+    column-break-inside: avoid;
+}
+
+div.linkslist figure img {
+    width: 100%; height: auto;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+}
+
+div.linkslist figure figcaption {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+}
+div.linkslist figure p {
+    font-size: .8rem;
+    color: #444;
+}
+
+div.linkslist small { 
+    font-size: 1rem;
+    float: right; 
+    text-transform: uppercase;
+    color: #aaa;
+} 
+
+div.linkslist small a { 
+    color: #666; 
+    text-decoration: none; 
+    transition: .4s color;
+}
+
+div.linkslist:hover figure:not(:hover) {
+    opacity: 0.4;
+}
+
+@media screen and (max-width: 750px) { 
+    .linkslist {
+        column-gap: 0px;
+    }
+    .linkslist figure {
+        width: 100%;
+    }
+}
