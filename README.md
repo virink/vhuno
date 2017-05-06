@@ -17,17 +17,19 @@ $ git clone https://github.com/virink/vhuno.git themes/vhuno
 theme: vhuno
 ```
 
-## 兼容性
-在Hexo 3.1.1测试正常。
+### 安裝配置Hexo
+[Hexo Install](HEXO_INSTALL.md)
 
 ## 配置示例
 
 ```yaml
 # Header
 menu:
-  首页: /#blog
-  关于: /about
-  友链: /links
+  博客: /#blog
+  歸檔: /archive/
+  友鏈: /links/
+  關於: /about/
+  訂閱: /feed.xml
 
 # Site favicon
 favicon: /images/favicon.png
@@ -112,6 +114,21 @@ layout: page-archive
 
 > !! hexo 默认有一个`/archives`，如果您认为归档页面的url（`/archive`）和这个冲突，可以选更加合适的名称:blush:。
 
+
+## 友情鏈接
+在Hexo根目錄的配置文件`_config.yml`中配置，例如：
+```yaml
+# for Links
+links:
+- url: https://virink.github.io
+  name: Virink
+  img: https://virink.github.io/images/avatar.png
+  info: Virink's Blog
+- url: https://www.virzz.com
+  name: Virink
+  img: https://www.virzz.com/images/avatar.png
+  info: Virink's Blog
+```
 
 ## 评论
 移除

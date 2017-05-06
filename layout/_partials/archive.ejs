@@ -9,7 +9,7 @@ if (is_category()) {
   title = page.year + '/' + page.month;
 } else if (is_year()) {
   title = page.year;
-} 
+}
 
 %>
 
@@ -28,7 +28,7 @@ if (is_category()) {
 
 <div class="main-post-list">
     <ol class="post-list">
-    
+
     <% page.posts.each(function(post, i){ %>
     <li>
 
@@ -38,7 +38,7 @@ if (is_category()) {
 
       <div class="post-list__meta">
 
-        <time datetime="<%= date(post.date, theme.date_format) %>" class="post-list__meta--date date"><%= date(post.date, theme.date_format) %></time> 
+        <time datetime="<%= date(post.date, theme.date_format) %>" class="post-list__meta--date date"><%= date(post.date, theme.date_format) %></time>
 
         <span class="post-list__meta--tags tags">
           <% if (post.tags && post.tags.length > 0){ %>

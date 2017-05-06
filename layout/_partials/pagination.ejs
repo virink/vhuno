@@ -10,7 +10,7 @@
     <% } %>
 
     <span class="pagination__page-number"> <%- page.current %> / <%- page.total %></span>
-    
+
     <% if (page.next){ %>
         <a class="older-posts pagination__older btn btn-small btn-tertiary" href="<%- config.root %><%- page.next_link %>"><%= __('pagination.next') %> &rarr;</a>
     <% } %>
