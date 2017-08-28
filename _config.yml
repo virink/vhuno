@@ -19,10 +19,7 @@ mathjax: true
 fancybox: true
 
 # Enable githubRepoWidget
-github_repo_widget: false
-
-# Enable BaiduPush
-baidupush: false
+github_repo_widget: true
 
 # Date / Time format
 date_time_format: YYYY-MM-DD HH:mm:ss

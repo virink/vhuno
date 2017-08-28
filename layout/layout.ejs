@@ -38,9 +38,23 @@
 <% if (config.author){ %>
   <meta name="author" content="<%= config.author %>">
 <% } %>
-<% if ( is_home() && config.description){ %>
-  <meta name="description" content="<%= config.description %>">
+<% if ( is_home() && config.description ){ %>
+    <meta name="description" content="<%= config.description %>">
 <% } %>
+<%
+  var keywords = '';
+  if ( config.keywords ){ 
+    keywords = config.keywords;
+  }
+  if(page.tags && page.tags != 'undefined'){
+    var tmp = [];
+    page.tags.sort('1','desc').each(function(item){
+      tmp.push(item.name);
+    });
+    keywords = keywords+','+tmp.join(',');
+  }
+%>
+  <meta name="keywords" content="<%= keywords %>">
 <%- open_graph({title: title}) %>
 <% if (theme.rss){ %>
   <link rel="alternate" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
